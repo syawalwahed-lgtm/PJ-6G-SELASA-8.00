@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pengembaraan Imbangan Cantik — PJ Tahun 6</title>
+<style>
+:root{color-scheme:light dark;--ink:light-dark(#19324a,#f0f6ff);--muted:light-dark(#52677a,#bdc9d8);--paper:light-dark(#fff,#18243b);--line:light-dark(#dce7f0,#34435d);--blue:#2764d8;--teal:#0f9f91;--yellow:#ffd65a;--pink:#ff7c9c;--bg:light-dark(#edf7ff,#101a2d)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;line-height:1.55}button,input{font:inherit}button{border:0;border-radius:14px;padding:12px 17px;font-weight:800;cursor:pointer;transition:transform .15s,filter .15s}button:hover{transform:translateY(-2px);filter:brightness(1.05)}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #ff9f43;outline-offset:3px}.primary{background:var(--blue);color:white}.secondary{background:light-dark(#e4efff,#263b60);color:var(--ink)}.success{background:var(--teal);color:white}.warning{background:var(--yellow);color:#503b00}.danger{background:var(--pink);color:#4c1730}.wrap{max-width:1050px;margin:auto;padding:20px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:1000;letter-spacing:.02em}.sound{padding:9px 12px}.hero{margin:22px 0;background:linear-gradient(125deg,#2563eb,#7957db 58%,#e65d9b);color:white;border-radius:28px;padding:clamp(24px,5vw,52px);position:relative;overflow:hidden;box-shadow:0 18px 45px #254d8525}.hero:after{content:"🤸‍♀️";position:absolute;right:5%;bottom:0;font-size:clamp(70px,15vw,145px);opacity:.9;transform:rotate(8deg)}.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.06;max-width:660px;margin:12px 0}.hero p{max-width:620px}.pill{display:inline-block;background:#ffffff2c;border:1px solid #ffffff55;padding:5px 12px;border-radius:99px;font-size:.85rem;font-weight:800}.panel{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,3vw,30px);margin:18px 0;box-shadow:0 10px 28px #17375b0b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}.tile{border-radius:18px;padding:18px;background:light-dark(#f2f8ff,#202f49);border:1px solid var(--line)}.tile .emoji{font-size:2rem}.tile h3{margin:7px 0}.muted{color:var(--muted)}.field{display:block;font-weight:800;margin:12px 0 6px}input{width:100%;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:13px 14px;border-radius:12px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.progress-shell{height:12px;background:light-dark(#dbe7f5,#263650);border-radius:99px;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,#12b8a6,#5d8dff);width:0%;transition:width .3s}.steps{display:flex;justify-content:space-between;gap:10px;font-size:.86rem;color:var(--muted);margin:7px 0 18px}.step{display:none}.step.active{display:block;animation:appear .25s ease}@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}.note{border-radius:18px;padding:18px;background:linear-gradient(130deg,light-dark(#e7f8ff,#20364d),light-dark(#fff4d2,#3b3441));border:1px solid var(--line)}.bigicon{font-size:3rem}.tag{display:inline-block;background:light-dark(#e6f2ff,#263b60);border-radius:10px;padding:4px 9px;margin:3px;font-size:.85rem;font-weight:800}.question{font-size:1.3rem;font-weight:900;margin:10px 0 18px}.choices{display:grid;gap:10px}.choice{display:block;text-align:left;background:light-dark(#f5f8fd,#202f49);color:var(--ink);border:2px solid var(--line);padding:14px;border-radius:15px}.choice.selected{border-color:var(--blue)}.choice.correct{border-color:var(--teal);background:light-dark(#e4fff7,#163c3b)}.choice.wrong{border-color:#e35a78;background:light-dark(#fff0f2,#462a3b)}.feedback{padding:14px;border-radius:14px;margin-top:14px}.feedback.good{background:light-dark(#dffaf1,#173d39)}.feedback.bad{background:light-dark(#fff0d9,#453724)}.hidden{display:none!important}.scorebig{font-size:clamp(2.7rem,9vw,5rem);font-weight:1000;line-height:1}.badgebig{font-size:4rem}.foot{text-align:center;color:var(--muted);font-size:.85rem;padding:20px}.link{color:light-dark(#185acb,#93b9ff);font-weight:800}.mini{font-size:.9rem}.confetti{font-size:1.8rem;letter-spacing:.3rem}.checklist li{margin:8px 0}.video-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:light-dark(#e5eef9,#17243a)}.smallprint{font-size:.8rem;color:var(--muted)}@media(max-width:520px){.wrap{padding:12px}.hero{border-radius:22px}.actions button{flex:1 1 130px}.steps{font-size:.76rem}}@media print{.topbar,.actions,.sound,.no-print{display:none!important}body{background:white;color:#111}.panel{box-shadow:none;break-inside:avoid}.step{display:none!important}#result{display:block!important}}
+</style>
+</head>
+<body>
+<div id="appRoot">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">🧭 MISI AKTIF • PJ TAHUN 6</div>
+<button class="secondary sound" id="soundToggle" aria-pressed="true">🔊 Bunyi: Hidup</button>
+</header>
+<div class="hero">
+<span class="pill">TEMA: AKU DAN SENI • UNIT 1</span>
+<h1>Pengembaraan<br>Imbangan Cantik!</h1>
+<p>Jom jadi penjelajah gimnastik! Kuasai kawalan badan, bekerjasama dan kumpulkan bintang dalam misi pembelajaran ini.</p>
+<p><strong>Guru:</strong> MUHAMAD SYAWALWAHED<br><strong>Sekolah:</strong> SK (P) JALAN YAHYA AWAL</p>
+</div>
+<div class="panel">
+<div class="grid">
+<div class="tile"><div class="emoji">🎯</div><h3>Misi pembelajaran</h3><p class="muted">Kenali teknik imbangan dan postur yang sesuai.</p></div>
+<div class="tile"><div class="emoji">⭐</div><h3>25 cabaran</h3><p class="muted">Jawab satu demi satu, dapatkan maklum balas serta-merta.</p></div>
+<div class="tile"><div class="emoji">🛡️</div><h3>Utamakan keselamatan</h3><p class="muted">Latihan fizikal hanya dengan ruang, alas dan pengawasan yang sesuai.</p></div>
+</div>
+<label class="field" for="studentName">Nama murid</label>
+<input id="studentName" maxlength="70" placeholder="Taip nama anda di sini" autocomplete="name">
+<div class="actions"><button class="primary" id="startBtn">🚀 Mula Pembelajaran</button><button class="secondary" id="resumeBtn">↩ Sambung kemajuan</button></div>
+<p id="homeMessage" class="smallprint" aria-live="polite">Kemajuan disimpan pada peranti/pelayar ini jika storan tempatan dibenarkan.</p>
+</div>
+<div class="panel">
+<h2>📚 Rujukan kurikulum</h2>
+<p><strong>Tema:</strong> Aku dan Seni &nbsp; <strong>Unit:</strong> 1 – Gimnastik Asas &nbsp; <strong>Tajuk:</strong> Imbangan Cantik</p>
+<p><strong>SK 1.1:</strong> Melakukan pergerakan yang memerlukan kawalan badan dan sokongan.</p>
+<p><strong>SK 2.1:</strong> Mengaplikasikan konsep kawalan badan dan sokongan dalam pergerakan.</p>
+<p><strong>SK 5.3:</strong> Berkomunikasi dalam pelbagai cara semasa melakukan aktiviti.</p>
+<p><strong>SP 1.1.1:</strong> Melakukan imbangan dinamik <em>single-leg circle</em> dan kereta sorong dua arah (<em>two-way wheelbarrow</em>).</p>
+<p><strong>SP 1.1.3:</strong> Melakukan imbangan songsang dirian tangan dengan sokongan sambil bergerak pada satu jarak.</p>
+<p><strong>SP 2.1.1:</strong> Menjelaskan postur badan yang sesuai untuk mengekalkan imbangan semasa melakukan <em>single-leg circle</em>, kereta sorong dua arah dan imbangan songsang.</p>
+<p><strong>SP 5.3.4:</strong> Berinteraksi secara positif dalam pelbagai situasi semasa melakukan aktiviti.</p>
+<p class="smallprint">Pemetaan tajuk dan SP dipadankan dengan DSKP KSSR Semakan 2017 serta RPT PJ Tahun 6 yang ditemui. Sila semak versi RPT rasmi sekolah sebelum digunakan sebagai rekod perancangan tahunan.</p>
+</div>
+
+<main id="learning" class="panel hidden">
+<div class="steps"><span id="stepLabel">Misi 1 daripada 5</span><span id="stepPct">20%</span></div><div class="progress-shell"><div class="progress-fill" id="lessonProgress"></div></div>
+<section class="step active" data-step="0">
+<h2>🗺️ Misi 1: Tetapkan matlamat</h2>
+<p>Selepas pengembaraan ini, anda boleh:</p>
+<ul class="checklist"><li>mengenal pasti kemahiran imbangan dinamik dan imbangan songsang;</li><li>menerangkan postur yang membantu mengekalkan imbangan;</li><li>menyatakan cara bekerjasama dan berkomunikasi dengan selamat.</li></ul>
+<div class="note"><strong>Peraturan penjelajah:</strong> Jangan cuba dirian tangan, piramid atau gerakan gimnastik berisiko tanpa guru terlatih, alas sesuai dan bantuan yang betul.</div>
+<div class="actions"><button class="primary next">Seterusnya ➜</button><button class="secondary homeBtn">Kembali ke Menu Utama</button></div>
+</section>
+<section class="step" data-step="1">
+<h2>🎨 Misi 2: Nota infografik</h2>
+<div class="note"><div class="bigicon">⭕</div><h3>1. Imbangan dinamik: Single-leg circle</h3><p>Pergerakan imbangan yang melibatkan koordinasi anggota badan dan kawalan semasa bergerak. Badan dan kepala dikawal, tangan membantu menyokong, dan pergerakan dilakukan mengikut urutan.</p><span class="tag">Kawalan</span><span class="tag">Koordinasi</span><span class="tag">Pergerakan terkawal</span></div>
+<div class="note" style="margin-top:12px"><div class="bigicon">🤝</div><h3>2. Kereta sorong dua arah</h3><p>Aktiviti berpasangan/kumpulan yang memerlukan peserta menyokong kaki rakan dan bergerak secara serentak mengikut isyarat. Kekalkan badan tegap dan berkomunikasi.</p><span class="tag">Kerjasama</span><span class="tag">Isyarat jelas</span><span class="tag">Badan tegap</span></div>
+<div class="note" style="margin-top:12px"><div class="bigicon">🙃</div><h3>3. Imbangan songsang dengan sokongan</h3><p>Dirian tangan ialah kemahiran lanjutan. Dalam pembelajaran, keselamatan dan sokongan guru terlatih sangat penting. Jangan lakukan sendiri atau tanpa alas yang sesuai.</p><span class="tag">Sokongan</span><span class="tag">Pengawasan guru</span></div>
+<div class="note" style="margin-top:12px"><div class="bigicon">🧍</div><h3>4. Apakah postur yang sesuai?</h3><p>Gunakan otot teras untuk mengawal badan, kekalkan jajaran badan yang sesuai dengan kemahiran, dan elakkan pergerakan mengejut. Dalam aktiviti berkumpulan, dengar arahan serta bergerak serentak.</p></div>
+<div class="actions"><button class="secondary prev">⬅ Sebelumnya</button><button class="primary next">Seterusnya ➜</button><button class="secondary homeBtn">Kembali ke Menu Utama</button></div>
+</section>
+<section class="step" data-step="2">
+<h2>🎬 Misi 3: Tonton dan perhatikan</h2>
+<p>Video berkaitan kemahiran <em>single-leg circle</em> dirujuk daripada bahan pembelajaran yang menyenaraikan sumber YouTube CIKGUSAFUAN. Jika video tidak dapat dipaparkan, gunakan pautan carian di bawah.</p>
+<div class="tile"><div class="bigicon">▶️</div><h3>Video: Single-leg circle</h3><p>Gunakan pautan YouTube untuk memilih video yang sesuai. Semak kandungan dan keselamatan demonstrasi sebelum digunakan dalam kelas.</p><a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=CIKGUSAFUAN+single+leg+circle+Pendidikan+Jasmani+Tahun+6">Cari video pembelajaran di YouTube ↗</a></div>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=CIKGUSAFUAN+single+leg+circle+Pendidikan+Jasmani+Tahun+6">Buka carian video YouTube ↗</a></p>
+<p class="smallprint">Pautan carian digunakan kerana URL video khusus tidak dapat disahkan secara langsung. Guru perlu memilih video yang tepat dan sesuai sebelum sesi PdP.</p>
+<div class="actions"><button class="secondary prev">⬅ Sebelumnya</button><button class="primary next">Seterusnya ➜</button><button class="secondary homeBtn">Kembali ke Menu Utama</button></div>
+</section>
+<section class="step" data-step="3">
+<h2>🎮 Misi 4: Permainan pengukuhan</h2>
+<p>Pilih tindakan paling sesuai untuk setiap situasi. Kumpulkan tiga token untuk membuka kuiz!</p>
+<div class="tile"><div class="emoji">🧩</div><h3 id="gamePrompt">Rakan anda belum bersedia untuk bergerak. Apa tindakan terbaik?</h3><div class="choices" id="gameChoices"></div><div id="gameFeedback" class="feedback hidden" aria-live="polite"></div><p>Token diperoleh: <strong id="tokens">0 / 3</strong></p><div class="progress-shell"><div id="gameProgress" class="progress-fill"></div></div></div>
+<div class="actions"><button class="secondary prev">⬅ Sebelumnya</button><button class="primary hidden" id="gameContinue">Mula Kuiz 25 Soalan ➜</button><button class="secondary homeBtn">Kembali ke Menu Utama</button></div>
+</section>
+<section class="step" data-step="4">
+<h2>🏆 Misi 5: Kuiz 25 soalan</h2>
+<p id="quizGreeting">Baca soalan dengan teliti dan pilih satu jawapan.</p>
+<div class="steps"><span id="questionCount">Soalan 1 / 25</span><span id="questionScore">⭐ 0</span></div><div class="progress-shell"><div id="quizProgress" class="progress-fill"></div></div>
+<div class="question" id="questionText"></div><div class="choices" id="quizChoices"></div><div id="quizFeedback" class="feedback hidden" aria-live="polite"></div>
+<div class="actions"><button class="primary hidden" id="nextQuestion">Soalan seterusnya ➜</button><button class="secondary" id="pauseQuiz">Simpan & berhenti seketika</button><button class="secondary homeBtn">Kembali ke Menu Utama</button></div>
+</section>
+</main>
+<section id="result" class="panel hidden">
+<div class="confetti">🎉 ⭐ 🎊 ⭐ 🎉</div><h2 id="resultTitle">Misi selesai!</h2><p id="resultName"></p>
+<div class="grid"><div class="tile"><div class="muted">Markah</div><div class="scorebig" id="finalScore">0/25</div></div><div class="tile"><div class="muted">Pencapaian</div><div class="scorebig" id="finalPercent">0%</div></div><div class="tile"><div class="muted">Bintang</div><div class="scorebig" id="finalStars">0 ⭐</div></div></div>
+<div class="tile" style="margin-top:14px"><div class="badgebig" id="badgeIcon">🏅</div><h3 id="badgeTitle">Lencana Penjelajah</h3><p id="badgeDesc"></p><p><strong>Betul:</strong> <span id="rightCount"></span> &nbsp; <strong>Salah:</strong> <span id="wrongCount"></span></p></div>
+<h2>📝 Semak jawapan dan penerangan</h2><div id="reviewList"></div>
+<div class="actions"><button class="primary" id="retryBtn">🔁 Cuba Semula</button><button class="secondary" id="reviewNotes">📚 Ulang Kaji Nota</button><button class="secondary" id="printBtn">🖨️ Cetak / Simpan PDF</button><button class="secondary homeBtn">Kembali ke Menu Utama</button></div>
+<p class="smallprint">Untuk menyimpan sebagai PDF, pilih “Cetak” kemudian pilih “Save as PDF” jika tersedia pada peranti anda.</p>
+</section>
+<div class="foot">🌈 Belajar dengan gembira, bergerak dengan selamat. • Aplikasi pembelajaran PJ Tahun 6</div>
+</div></div>
+<script>
+const questions = [
+{q:"Apakah fokus utama Unit 1: Imbangan Cantik?",o:["Kawalan badan dan sokongan","Membaling sejauh mungkin","Berlari pecut sahaja","Menghafal nama pemain"],a:0,e:"Unit ini menekankan pergerakan yang memerlukan kawalan badan dan sokongan."},
+{q:"Apakah maksud imbangan dinamik?",o:["Mengekalkan posisi tanpa sebarang pergerakan sahaja","Mengawal imbangan semasa melakukan pergerakan","Berlari tanpa melihat arah","Melompat setinggi mungkin"],a:1,e:"Imbangan dinamik memerlukan kawalan ketika badan atau anggota bergerak."},
+{q:"Single-leg circle disenaraikan di bawah kemahiran apa?",o:["Kemahiran imbangan","Kemahiran memadang","Kemahiran balingan","Kemahiran renang"],a:0,e:"DSKP Tahun 6 meletakkan single-leg circle dalam kemahiran imbangan Gimnastik Asas."},
+{q:"Apakah yang membantu pergerakan menjadi lebih terkawal?",o:["Bergerak mengejut","Mengabaikan arahan","Koordinasi anggota badan","Menutup mata"],a:2,e:"Koordinasi membantu anggota bergerak mengikut urutan dan dengan kawalan."},
+{q:"Dalam kereta sorong dua arah, rakan perlu...",o:["Bergerak sesuka hati","Bergerak serentak mengikut isyarat","Menolak dengan kasar","Berlumba tanpa arahan"],a:1,e:"Pergerakan serentak dan isyarat jelas menyokong kerjasama serta kestabilan."},
+{q:"Apakah nilai penting ketika aktiviti imbangan berkumpulan?",o:["Menyalahkan rakan","Bersaing sehingga menolak","Kerjasama dan komunikasi positif","Tidak mendengar arahan"],a:2,e:"SP 5.3.4 menekankan interaksi positif dalam pelbagai situasi aktiviti."},
+{q:"Apakah tindakan sebelum aktiviti gimnastik?",o:["Terus mencuba gerakan sukar","Pastikan ruang dan alas selamat serta ikut arahan guru","Bermain di kawasan licin","Bergurau ketika rakan membuat imbangan"],a:1,e:"Pemeriksaan ruang, alas dan arahan guru mengurangkan risiko kecederaan."},
+{q:"Mengapa badan perlu dikawal dan dijajarkan dengan sesuai?",o:["Untuk membantu mengekalkan imbangan","Untuk mempercepat semua gerakan tanpa kawalan","Supaya tidak perlu bekerjasama","Untuk mengelakkan pemanasan badan"],a:0,e:"Postur yang sesuai membantu kestabilan dan kawalan pergerakan."},
+{q:"Apakah Standard Kandungan 1.1?",o:["Mengukur komposisi badan","Melakukan pergerakan yang memerlukan kawalan badan dan sokongan","Bermain permainan air","Membuat jadual makanan"],a:1,e:"SK 1.1 menyatakan pergerakan yang memerlukan kawalan badan dan sokongan."},
+{q:"Apakah Standard Pembelajaran 1.1.1?",o:["Melakukan imbangan dinamik single-leg circle dan kereta sorong dua arah","Melakukan ujian SEGAK sahaja","Melakukan kuak dada","Melontar objek berbentuk rod"],a:0,e:"Itulah kandungan SP 1.1.1 dalam DSKP PJ Tahun 6."},
+{q:"Apakah yang dinyatakan dalam SP 1.1.3?",o:["Berlari melepasi halangan","Melakukan imbangan songsang dirian tangan dengan sokongan sambil bergerak pada jarak","Melakukan servis badminton","Merekod berat badan"],a:1,e:"SP 1.1.3 melibatkan imbangan songsang dirian tangan dengan sokongan."},
+{q:"Apakah yang perlu dijelaskan melalui SP 2.1.1?",o:["Warna pakaian sukan","Postur badan yang sesuai untuk mengekalkan imbangan","Nama semua atlet","Cara mengira jaringan"],a:1,e:"SP 2.1.1 meminta murid menjelaskan postur sesuai untuk kemahiran imbangan yang dipelajari."},
+{q:"Apakah maksud sokongan dalam pembelajaran imbangan?",o:["Bantuan atau titik sokongan yang membantu kawalan badan","Gangguan rakan","Berlari meninggalkan kumpulan","Mengabaikan keselamatan"],a:0,e:"Sokongan membantu murid mengawal pergerakan dengan lebih selamat."},
+{q:"Jika rakan berasa tidak selesa semasa latihan, apakah tindakan terbaik?",o:["Paksa rakan teruskan","Ketawakan rakan","Berhenti, maklumkan guru dan ikut arahan","Tambah kelajuan"],a:2,e:"Hentikan aktiviti dan maklumkan guru apabila ada ketidakselesaan atau risiko."},
+{q:"Siapakah yang patut membantu latihan dirian tangan?",o:["Rakan tanpa latihan","Guru terlatih atau orang yang kompeten dengan peralatan sesuai","Sesiapa sahaja tanpa arahan","Tiada sesiapa"],a:1,e:"Dirian tangan ialah kemahiran lanjutan dan perlu sokongan serta pengawasan yang sesuai."},
+{q:"Apakah tujuan memberi isyarat sebelum bergerak bersama?",o:["Supaya semua bersedia dan bergerak serentak","Supaya rakan terkejut","Supaya aktiviti lebih berbahaya","Untuk mengelakkan komunikasi"],a:0,e:"Isyarat yang jelas menyelaraskan masa mula pergerakan."},
+{q:"Apakah tindakan yang menunjukkan komunikasi positif?",o:["Menjerit mengejek","Mendengar dan memberi arahan dengan sopan","Menyalahkan rakan","Sengaja mengelirukan kumpulan"],a:1,e:"Komunikasi positif membantu kerjasama dan keselamatan."},
+{q:"Apakah peralatan penting untuk aktiviti gimnastik lantai yang sesuai?",o:["Lantai licin","Alas gimnastik yang sesuai","Kerusi beroda","Permukaan berbatu"],a:1,e:"Alas yang sesuai membantu mengurangkan impak, di bawah pengawasan guru."},
+{q:"Apakah yang patut dilakukan jika ruang aktiviti terlalu sempit?",o:["Teruskan juga","Berlari lebih laju","Maklumkan guru dan susun semula ruang","Tolak peralatan ke tepi tanpa izin"],a:2,e:"Ruang mesti cukup dan bebas halangan sebelum aktiviti dimulakan."},
+{q:"Apakah maksud postur badan?",o:["Cara kedudukan dan penjajaran badan","Bilangan murid dalam kelas","Jenis kasut sahaja","Masa rehat"],a:0,e:"Postur merujuk kepada kedudukan atau penjajaran badan semasa bergerak."},
+{q:"Mengapa kita perlu memanaskan badan?",o:["Untuk menggantikan semua arahan keselamatan","Menyediakan badan secara beransur-ansur sebelum aktiviti","Supaya cepat penat","Untuk mengelakkan minum air"],a:1,e:"Pemanasan badan membantu menyediakan tubuh sebelum aktiviti fizikal."},
+{q:"Jika kumpulan tidak bergerak serentak, apakah yang patut dilakukan?",o:["Berhenti, berkomunikasi dan cuba semula mengikut isyarat","Tarik rakan dengan kuat","Salahkan seorang ahli","Abaikan keselamatan"],a:0,e:"Berhenti dan menyelaraskan arahan membantu kumpulan bergerak dengan terkawal."},
+{q:"Apakah cara paling baik belajar gerakan gimnastik baharu?",o:["Cuba gerakan paling sukar sendiri","Ikut demonstrasi, arahan guru dan tahap kemampuan","Tiru video tanpa pengawasan","Bersaing siapa paling berani"],a:1,e:"Belajar secara berperingkat dengan bimbingan ialah pilihan lebih selamat."},
+{q:"Apakah tindakan yang sesuai selepas latihan?",o:["Berlari keluar serta-merta","Tinggalkan peralatan berselerak","Ikut arahan penyejukan badan dan kemas peralatan dengan selamat","Ganggu kumpulan lain"],a:2,e:"Penutup aktiviti dan pengurusan peralatan perlu dibuat mengikut arahan guru."},
+{q:"Apakah sikap terbaik jika belum berjaya mengekalkan imbangan?",o:["Putus asa dan mengejek diri","Berlatih secara berperingkat dengan bimbingan dan maklum balas","Cuba aksi berbahaya","Salahkan rakan"],a:1,e:"Kemahiran berkembang melalui latihan yang sesuai, maklum balas dan keselamatan."}
+];
+const gameItems=[
+{q:"Rakan anda belum bersedia untuk bergerak. Apa tindakan terbaik?",o:["Beri isyarat dan tunggu semua bersedia","Terus bergerak","Tarik rakan"],a:0,e:"Tunggu semua bersedia dan gunakan isyarat jelas."},
+{q:"Anda nampak lantai licin. Apa tindakan terbaik?",o:["Berlari lebih laju","Berhenti dan maklumkan guru","Terus buat dirian tangan"],a:1,e:"Lantai licin ialah risiko; maklumkan guru sebelum aktiviti."},
+{q:"Kumpulan sukar bergerak serentak. Apa yang membantu?",o:["Arahan dan komunikasi positif","Menjerit tanpa aturan","Bergerak ikut suka"],a:0,e:"Isyarat dan komunikasi membantu menyelaraskan pergerakan."}
+];
+let soundOn=true, step=0, gameIndex=0, tokens=0, qIndex=0, answers=[], answered=false, student="";
+const $=id=>document.getElementById(id);
+function say(text){if(!soundOn)return;try{if("speechSynthesis"in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="ms-MY";u.rate=.95;speechSynthesis.speak(u)}}catch(e){}}
+function tone(ok){if(!soundOn)return;try{let C=window.AudioContext||window.webkitAudioContext;if(!C)return;let c=new C(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=ok?740:220;g.gain.value=.07;o.start();o.stop(c.currentTime+.14)}catch(e){}}
+function save(){try{localStorage.setItem("pj6Imbangan",JSON.stringify({student,step,gameIndex,tokens,qIndex,answers,started:true}))}catch(e){}}
+function showStep(n){step=Math.max(0,Math.min(4,n));$("learning").classList.remove("hidden");$("result").classList.add("hidden");document.querySelectorAll(".step").forEach((s,i)=>s.classList.toggle("active",i===step));$("stepLabel").textContent="Misi "+(step+1)+" daripada 5";$("stepPct").textContent=Math.round((step+1)/5*100)+"%";$("lessonProgress").style.width=((step+1)/5*100)+"%";if(step===3)renderGame();if(step===4)renderQuestion();save();$("learning").scrollIntoView({behavior:"smooth",block:"start"})}
+function home(){ $("learning").classList.add("hidden");$("result").classList.add("hidden");window.scrollTo({top:0,behavior:"smooth"});$("studentName").value=student||$("studentName").value}
+function begin(){student=$("studentName").value.trim();if(!student){$("homeMessage").textContent="Sila masukkan nama murid dahulu."; $("studentName").focus();return}qIndex=0;answers=[];tokens=0;gameIndex=0;showStep(0);$("quizGreeting").textContent="Semoga berjaya, "+student+"!";save()}
+function resume(){let d;try{d=JSON.parse(localStorage.getItem("pj6Imbangan")||"null")}catch(e){}if(!d||!d.started){$("homeMessage").textContent="Tiada kemajuan tersimpan pada pelayar ini. Tekan Mula Pembelajaran.";return}student=d.student||"";$("studentName").value=student;step=d.step||0;gameIndex=d.gameIndex||0;tokens=d.tokens||0;qIndex=d.qIndex||0;answers=d.answers||[];showStep(step);$("homeMessage").textContent="Kemajuan disambung."}
+document.querySelectorAll(".next").forEach(b=>b.addEventListener("click",()=>showStep(step+1)));document.querySelectorAll(".prev").forEach(b=>b.addEventListener("click",()=>showStep(step-1)));document.querySelectorAll(".homeBtn").forEach(b=>b.addEventListener("click",home));
+$("startBtn").addEventListener("click",begin);$("resumeBtn").addEventListener("click",resume);
+$("soundToggle").addEventListener("click",()=>{soundOn=!soundOn;$("soundToggle").textContent=soundOn?"🔊 Bunyi: Hidup":"🔇 Bunyi: Mati";$("soundToggle").setAttribute("aria-pressed",String(soundOn));if(!soundOn&&"speechSynthesis"in window)speechSynthesis.cancel()});
+function renderGame(){const item=gameItems[gameIndex];$("gamePrompt").textContent=item?item.q:"Hebat! Anda sudah mengumpul semua token."; $("gameChoices").innerHTML="";$("gameFeedback").classList.add("hidden");$("tokens").textContent=tokens+" / 3";$("gameProgress").style.width=(tokens/3*100)+"%";if(!item){$("gameContinue").classList.remove("hidden");return}$("gameContinue").classList.add("hidden");item.o.forEach((v,i)=>{let b=document.createElement("button");b.className="choice";b.textContent=String.fromCharCode(65+i)+". "+v;b.onclick=()=>{if(b.dataset.done)return;[...$("gameChoices").children].forEach(x=>x.dataset.done="1");let ok=i===item.a;let f=$("gameFeedback");f.className="feedback "+(ok?"good":"bad");f.textContent=(ok?"Betul! Syabas! ⭐ ":"Belum tepat. Cuba lagi! ")+item.e;if(ok){tokens++;say("Betul! Syabas!");tone(true)}else{say("Belum tepat. Cuba lagi!");tone(false)}if(ok)gameIndex++;$("tokens").textContent=tokens+" / 3";$("gameProgress").style.width=(tokens/3*100)+"%";save();setTimeout(renderGame,1000)};$("gameChoices").appendChild(b)})}
+$("gameContinue").addEventListener("click",()=>showStep(4));
+function renderQuestion(){if(qIndex>=questions.length){finish();return}answered=answers[qIndex]!==undefined;const q=questions[qIndex];$("questionCount").textContent="Soalan "+(qIndex+1)+" / 25";$("questionScore").textContent="⭐ "+answers.filter((a,i)=>a===questions[i].a).length;$("quizProgress").style.width=((qIndex)/25*100)+"%";$("questionText").textContent=q.q;$("quizChoices").innerHTML="";$("quizFeedback").classList.add("hidden");q.o.forEach((v,i)=>{let b=document.createElement("button");b.className="choice";b.textContent=String.fromCharCode(65+i)+". "+v;if(answered){b.disabled=true;if(i===q.a)b.classList.add("correct");if(answers[qIndex]===i&&i!==q.a)b.classList.add("wrong")}else b.onclick=()=>answerQuestion(i);$("quizChoices").appendChild(b)});$("nextQuestion").classList.toggle("hidden",!answered);if(answered){let ok=answers[qIndex]===q.a;$("quizFeedback").className="feedback "+(ok?"good":"bad");$("quizFeedback").textContent=(ok?"Betul! Syabas! ⭐ ":"Belum tepat. Cuba lagi! ")+q.e}}
+function answerQuestion(i){if(answers[qIndex]!==undefined)return;answers[qIndex]=i;let ok=i===questions[qIndex].a;if(ok){say("Betul! Syabas!");tone(true)}else{say("Belum tepat. Cuba lagi!");tone(false)}renderQuestion();save()}
+$("nextQuestion").addEventListener("click",()=>{qIndex++;if(qIndex>=25)finish();else{renderQuestion();save()}});
+$("pauseQuiz").addEventListener("click",()=>{save();$("homeMessage").textContent="Kemajuan kuiz disimpan. Tekan Sambung kemajuan untuk meneruskan.";home()});
+function finish(){let correct=answers.reduce((n,a,i)=>n+(a===questions[i].a?1:0),0),wrong=25-correct,pct=Math.round(correct/25*100),stars=Math.round(correct/25*5);$("learning").classList.add("hidden");$("result").classList.remove("hidden");$("resultTitle").textContent=pct>=80?"Tahniah, Penjelajah Imbangan!":pct>=50?"Syabas, teruskan latihan!":"Jangan putus asa, cuba lagi!";$("resultName").textContent="Laporan pencapaian: "+student;$("finalScore").textContent=correct+"/25";$("finalPercent").textContent=pct+"%";$("finalStars").textContent=stars+" ⭐";$("rightCount").textContent=correct;$("wrongCount").textContent=wrong;$("badgeIcon").textContent=pct>=80?"🏆":pct>=50?"🥈":"🌱";$("badgeTitle").textContent=pct>=80?"Lencana Juara Imbangan":pct>=50?"Lencana Pengembara Gigih":"Lencana Mula Berani";$("badgeDesc").textContent=pct>=80?"Anda menunjukkan penguasaan yang baik.":pct>=50?"Anda sedang membina kemahiran. Ulang kaji bahagian yang belum dikuasai.":"Teruskan belajar dan cuba lagi untuk meningkatkan pencapaian.";let r=$("reviewList");r.innerHTML="";questions.forEach((q,i)=>{let ok=answers[i]===q.a,box=document.createElement("div");box.className="tile";box.style.margin="10px 0";let h=document.createElement("h3");h.textContent=(i+1)+". "+q.q;let p=document.createElement("p");p.textContent=(ok?"✅ Betul. ":"❌ Jawapan anda: "+(q.o[answers[i]]||"Belum dijawab")+". ")+"Jawapan tepat: "+q.o[q.a]+".";let e=document.createElement("p");e.className="muted";e.textContent=q.e;box.append(h,p,e);r.appendChild(box)});try{localStorage.setItem("pj6Imbangan",JSON.stringify({student,step:4,gameIndex:3,tokens,qIndex:25,answers,started:true,finished:true,correct}))}catch(e){}$("result").scrollIntoView({behavior:"smooth"})}
+$("retryBtn").addEventListener("click",()=>{qIndex=0;answers=[];tokens=0;gameIndex=0;showStep(0)});$("reviewNotes").addEventListener("click",()=>showStep(1));$("printBtn").addEventListener("click",()=>window.print());
+</script>
+</body>
+</html>
